@@ -3,9 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ButtonAppBar from "./Components/AppBarx";
+import {SideBar} from "./Components/SideBar";
 
 ReactDOM.render(
   <React.StrictMode>
+
+    <ButtonAppBar />
+    <SideBar />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
