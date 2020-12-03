@@ -1,38 +1,53 @@
 import React from 'react';
 import './App.css';
-import { Container, Box } from "@material-ui/core";
-import Chart from './Components/Chart'
+import {Grid} from "@material-ui/core";
 import ReactPlayer from "react-player";
 import {makeStyles} from "@material-ui/core/styles";
+import SideBar from "./Components/SideBar";
+import Videos from "./Components/VideoList";
 
 function App() {
     let video: string = "https://www.youtube.com/watch?v=oSk3NMZCsv0";
-
+    const classes = useStyle();
 
   return (
-    <div className="App">
-      <Container>
-          <Box display="flex">
-            <Box display="flex">
-                <ReactPlayer
-                 url={video}
-                 loop={true}
-                 playing
-                />
-            </Box>
-            <Box display="flex">
-            </Box>
-          </Box>
-      </Container>
-    </div>
+    <Grid container className="App" spacing={10} direction="row">
+            <Grid item >
+                <SideBar />
+            </Grid>
+            <Grid item  id="video">
+                <ReactPlayer url={video} loop />
+            </Grid>
+            <Grid item>
+                <Videos />
+            </Grid>
+    </Grid>
   );
 }
+// {
+//
+//     <Grid item>
+
+//     </Grid>
+//     <Grid item>
+//         <Forms2 />
+//     </Grid>
+// }
 
 export default App;
 
 
 const useStyle = makeStyles({
     Box:{
-        aligItems: ""
+        marginTop: 30,
+        justifyContent: "space-between"
+    },
+    root: {
+        flexGrow: 1,
+    },
+    GridContainer:{
+        justify: "start",
+        spacing:10,
+
     }
 })

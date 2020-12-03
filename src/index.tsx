@@ -4,14 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ButtonAppBar from "./Components/AppBarx";
-import {SideBar} from "./Components/SideBar";
+import { Grid } from "@material-ui/core";
 
 ReactDOM.render(
   <React.StrictMode>
-
-    <ButtonAppBar />
-    <SideBar />
-    <App />
+        <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
