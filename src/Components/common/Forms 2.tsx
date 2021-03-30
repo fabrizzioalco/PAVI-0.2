@@ -72,30 +72,6 @@ const Forms: FunctionComponent= () =>{
 
                         </Box>
                     </Grid>
-                    <Grid item>
-                        <Box display="flex">
-                            <input type="file"
-                                   id="configurationFileUpload"
-                                   style={{ display: 'none' }}
-                                   onChange={handleConfigFile}
-                            />
-                            <label htmlFor={'configurationFileUpload'}>
-                                <Button
-                                    variant="contained"
-                                    component="span"
-                                    className={classes.button}
-                                >
-                                    <Typography variant="caption">Upload</Typography>
-                                </Button>
-                            </label>
-                            <Card className={classes.card} variant="outlined">
-                                <CardContent>
-                                    <Typography className={classes.typography} >{configFile}</Typography>
-                                </CardContent>
-                            </Card>
-
-                        </Box>
-                    </Grid>
                 </Grid>
         </>
     )

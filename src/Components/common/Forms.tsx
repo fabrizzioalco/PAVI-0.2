@@ -20,24 +20,6 @@ export const Forms = () =>{
                 <TextField id="outlined-basic" label="" variant="outlined" />
                 <TextField id="outlined-basic" label="Outlined" variant="outlined" />
                 <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-                {/*<TextField*/}
-                {/*    id="outlined-select-currency-native"*/}
-                {/*    select*/}
-                {/*    label="Native select"*/}
-                {/*    value={algorithm}*/}
-                {/*    onChange={(event) => handleChange(event, e.target.value)}*/}
-                {/*    SelectProps={{*/}
-                {/*        native: true,*/}
-                {/*    }}*/}
-                {/*    helperText="Please select your currency"*/}
-                {/*    variant="outlined"*/}
-                {/*>*/}
-                {/*    {algorithms.map((algo) => (*/}
-                {/*        <option key={algo} value={algo}>*/}
-                {/*            {algo}*/}
-                {/*        </option>*/}
-                {/*    ))}*/}
-                {/*</TextField>*/}
             </form>
         </>
     )
