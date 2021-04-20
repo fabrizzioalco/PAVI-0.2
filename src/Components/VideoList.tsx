@@ -17,7 +17,7 @@ const Videos = () => {
             setData(response.data)
             alert("Success" + data)
         })
-        .catch(error => alert(error)
+        .catch(error => alert(error))
     )})
     // function getData() {
 
@@ -32,7 +32,7 @@ const Videos = () => {
     // }
     return (
         <div>
-            <Typography>{data}</Typography>
+            {data.map((item)=> <Typography>{item}</Typography>)}
         </div>
     )
 }
