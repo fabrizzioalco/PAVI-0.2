@@ -11,7 +11,7 @@ function App() {
     const classes = useStyle();
 
   return (
-    <Grid container className="App" spacing={10} direction="row">
+    <Grid container className="App" spacing={10} justify="center">
             <Grid item >
                 <SideBar />
             </Grid>
