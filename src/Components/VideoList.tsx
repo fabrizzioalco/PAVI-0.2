@@ -6,6 +6,8 @@ import Paper from '@material-ui/core/Paper';
 const Videos = () => {
     // axios.defaults.baseURL = "127.0.0.1:8001";
     const [data, setData] = useState<any[]>([])
+    const [cars, setCars] = useState<any[]>([])
+    const [persons, setPerson] = useState<any[]>([])
    
     const useStyles = makeStyles({
         table: {
@@ -17,6 +19,7 @@ const Videos = () => {
         axios.get('http://127.0.0.1:8001/results/0a0692e6-63e4-11eb-a663-51115c07f023')
             .then(response => {
                 setData(response.data.processing[0].detections)
+                console.log(response.data)
                 // alert("Success" + data)
             })
             .catch(error => alert(error))
@@ -42,8 +45,8 @@ const Videos = () => {
                                 <TableCell component="th" scope="row">
                                     {row.frame}
                                 </TableCell>
-                                <TableCell align="right">{row.objects.cars}</TableCell>
-                                <TableCell align="right">hey</TableCell>
+                                <TableCell align="right">{row.objects.car== null ?  "N/A": row.objects.car.boxes[0].height}</TableCell>
+                        <TableCell align="right">{row.objects.person == null ? "N/A" : row.objects.person.boxes[0].height}</TableCell>
                                 <TableCell align="right">{row.seconds}</TableCell>
                             </TableRow>
                         ))}
